@@ -67,7 +67,7 @@ nav > .nav-body {
 }
 
 .nav-items>ul>li>a:hover{
-  box-shadow: 0 2px 0 0 white;
+  box-shadow: 0 1.5px 0 0 white;
 }
 
 .nav-items>ul>li>img {
