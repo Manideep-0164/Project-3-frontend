@@ -5,6 +5,8 @@ let userName = localStorage.getItem("name") || null;
 
 let navbar = document.querySelector("nav");
 let helpTxt = document.querySelector(".help-text");
+let logoutimg = document.getElementById("logout-img")
+let logouttxt = document.getElementById("log-out")
 let hlpSticky = helpTxt.offsetTop;
 let sticky = navbar.offsetTop;
 
@@ -27,7 +29,7 @@ function myFunction() {
 let menu = document.getElementsByClassName("menu-bar")
 
 window.addEventListener('scroll', () => {
-    
+
     const scrollPosition = window.pageYOffset;      // Get the scroll position
 
     if (scrollPosition >= 3968.285888671875) {      //3987.142822265625
@@ -64,7 +66,14 @@ document.querySelector(".overlay").addEventListener("click", () => {
 document.getElementById("user-name").textContent = userName || 'Sign-in';
 
 if (userName) {
-    document.getElementById("log-out").textContent = 'Logout';
+
+    // Generating the Logout section
+    logouttxt.textContent = 'Logout';
+    logoutimg.setAttribute("src", "../images/logout-svgrepo-com.png");
+    logoutimg.style.marginLeft = "-1";
+    logoutimg.style.width = "22";
+
+    // Removing the token and name from LS after logout
     document.getElementById("log-out").addEventListener("click", () => {
         localStorage.removeItem('token');
         localStorage.removeItem('name');
@@ -80,11 +89,19 @@ if (userName) {
 
         // tempAlert("Successfully Logged Out", 5000);
         alert("Successfully Logged Out")
-        document.getElementById("log-out").textContent = 'About';
+        logouttxt.textContent = 'About';
+        logoutimg.setAttribute("src", "../images/about-svgrepo-com.png");
+        logoutimg.style.marginLeft = "-1";
+        logoutimg.style.width = "24";
         location.reload();
     })
 }
-else document.getElementById("log-out").textContent = 'About';
+else {
+    logouttxt.textContent = 'About';
+    logoutimg.setAttribute("src", "../images/about-svgrepo-com.png");
+    logoutimg.style.marginLeft = "-1";
+    logoutimg.style.width = "24";
+}
 
 function tempAlert(msg, duration) {
     var el = document.createElement("div");
