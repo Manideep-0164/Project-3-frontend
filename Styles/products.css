@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    --border-color: #e4e4e4
+}
+
+.product-top{
+    width: 100%;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    margin-top: 7.2rem;
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+
+    /* border: 2px solid red; */
+}
+
+.product-top > .heading {
+    font-weight: bolder;
+    font-size: 1rem;
+    padding: 0.8rem 0;
+    border-right: 1px solid var(--border-color);
+    font-family: system-ui;
+    padding-right: 1.5rem;
+}
+
+.product-top > ul{
+    padding: 0.9rem 0.5rem;
+}
+
+.product-top > ul >li{
+    list-style: none;
+    display: inline;
+    padding: 0.9rem 0;
+    margin: 0 0.9rem;
+}
+
+.product-top > ul > li:nth-child(1){
+    font-weight: bold;
+    font-size: 1rem;
+    color: gray;
+}
+
+.product-top > ul > li:last-child{
+    font-weight: bold;
+    font-size: 1rem;
+    color: gray;
+}
+
+.product-top > ul > li:nth-child(1):hover , .product-top > ul > li:last-child:hover{
+    box-shadow: inherit;
+    cursor: text;
+}
+
+.product-top > ul >li:hover{
+    box-shadow: 0 1.2px 0 0 red;
+    cursor: pointer;
+}
+
+/* PRODUCT-INFO ****************************** PRODUCT-INFO ****************************** PRODUCT-INFO ****************************** */
+
+.product-data{
+    width: 100%;
+    display: flex;
+    /* padding: 0.5rem; */
+}
+
+.product-data > .filter{
+    width: 22%;
+    border: 2px solid red;
+    height: 100vh;
+}
+
+.product-data > .products{
+    width: 78%;
+    height: 100vh;
+    border: 2px solid red;
+}

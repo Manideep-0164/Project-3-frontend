@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+  --menu-hover-color: #525d62;
+}
+
+.help-text {
+  /* position: fixed;
+  top: 0; */
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+  padding: 2px 20px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* .sticky {
+  position: fixed;
+  top: 0;
+} */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: auto;
+}
+
+nav>.nav-body {
+  /* position: fixed; */
+  top: 21px;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  background-color: #232f3e;
+  align-items: center;
+}
+
+.logo {
+  margin-bottom: 7px;
+}
+
+.logo>a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.nav-items>ul {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.nav-items>ul>li {
+  display: flex;
+  list-style: none;
+  padding: 18px;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-items>ul>li>a {
+  box-shadow: none;
+}
+
+.nav-items>ul>li>a:hover {
+  box-shadow: 0 1.5px 0 0 white;
+}
+
+.nav-items>ul>li>img {
+  width: 21px;
+}
+
+.nav-items>ul>li>a {
+  color: white;
+  text-decoration: none;
+}
+
+#badge {
+  position: absolute;
+  top: -7px;
+  right: -16px;
+  padding: 0px 5px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Search Styles ****************************** Search Styles ****************************** Search Styles ****************************** */
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: white;
+  border: none;
+  color: #646464;
+  padding: 8px 1rem;
+  border-radius: 5px;
+  width: 32em;
+  /* transition: all ease-in-out .1s; */
+  margin-right: -2rem;
+}
+
+.search_input:hover,
+.search_input:focus {
+  box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:focus {
+  outline: none;
+  background-color: #ffffff;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+.search_input:focus+.search_button {
+  background-color: #f0eeee;
+}
+
+.search__button {
+  border: none;
+  background-color: white;
+  margin-top: .1em;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search__icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #ff0000;
+}
+
+@media (min-width:980px) and (max-width:1120px) {
+  .search__input {
+    width: 20em;
+  }
+}
+
+@media (min-width:700px) and (max-width:980px) {
+  .nav-items {
+    display: none;
+  }
+}
