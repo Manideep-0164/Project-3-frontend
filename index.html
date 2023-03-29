@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy Indutrial and Business Supplies</title>
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/256/marriott-hotels.png">
-    <link rel="stylesheet" href="./styles//style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/login.css">
 
     <!-- Scroll method from jquery  -->
@@ -17,11 +17,11 @@
         $(document).ready(function () {
             $(window).scroll(function () {
                 if ($(document).scrollTop() < 2000) {
-                    // $(".menu-bar").addClass("remove-fixed");
-                    document.querySelector(".landing-body>.menu-bar").classList.remove("remove-fixed")
+                    // $(".menu-bar").addClass("fixed-menu");
+                    document.querySelector(".landing-body>.menu-bar").classList.remove("fixed-menu")
                 } else {
-                    document.querySelector(".landing-body>.menu-bar").classList.add("remove-fixed")
-                    // $(".menu-bar").removeClass("remove-fixed");
+                    document.querySelector(".landing-body>.menu-bar").classList.add("fixed-menu")
+                    // $(".menu-bar").removeClass("fixed-menu");
                 }
             });
         });
@@ -60,10 +60,10 @@
             </div>
             <div class="nav-items">
                 <ul>
-                    <li><img src="https://www.industrybuying.com/static/svg/signin-icon.svg" alt="" /><a href="#"
+                    <li><img src="https://www.industrybuying.com/static/svg/signin-icon.svg" alt="" /><a href="#" onclick="return false"
                             id="user-name">Sign-in</a></li>
                     <li><img style="width: 26px; margin-right: -4px;" src="./images/box-svgrepo-com.png"
-                            alt="" /><a href="#">Orders</a></li>
+                            alt="" /><a href="#" onclick="return false">Orders</a></li>
                     <li style="gap:0px; position: relative;"><svg viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg" style="width:24px;">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -75,11 +75,11 @@
                                     d="M11.25 18.75C11.25 19.58 10.58 20.25 9.75 20.25C8.92 20.25 8.25 19.58 8.25 18.75C8.25 17.92 8.92 17.25 9.75 17.25C10.58 17.25 11.25 17.92 11.25 18.75ZM16.25 17.25C15.42 17.25 14.75 17.92 14.75 18.75C14.75 19.58 15.42 20.25 16.25 20.25C17.08 20.25 17.75 19.58 17.75 18.75C17.75 17.92 17.08 17.25 16.25 17.25ZM20.73 7.68L18.73 15.68C18.65 16.01 18.35 16.25 18 16.25H8C7.64 16.25 7.33 15.99 7.26 15.63L5.37 5.25H4C3.59 5.25 3.25 4.91 3.25 4.5C3.25 4.09 3.59 3.75 4 3.75H6C6.36 3.75 6.67 4.01 6.74 4.37L7.17 6.75H20C20.23 6.75 20.45 6.86 20.59 7.04C20.73 7.22 20.78 7.46 20.73 7.68ZM19.04 8.25H7.44L8.62 14.75H17.41L19.04 8.25Z"
                                     fill="#fcfcfc"></path>
                             </g>
-                        </svg><a href="#" style="position:relative">Cart<span id="badge">0</span></a></li>
+                        </svg><a href="#" onclick="return false" style="position:relative">Cart<span id="badge">0</span></a></li>
                     <li style="gap: 3px;">
                         <img style="width: 24px; margin-right: -1px;" id="logout-img" src="./images/about-svgrepo-com.png"
                             alt="" />
-                        <a href="#" id="log-out">About</a>
+                        <a href="#" onclick="return false" id="log-out">About</a>
                     </li>
                 </ul>
             </div>
@@ -107,7 +107,7 @@
                 <li><img src="./images/1626346305161209it-electronics (1).webp" alt="">IT & Electronics</li>
                 <li><img src="./images/1626345844161209furniture-hospitality.webp" alt="">Furniture and Hospitality</li>
             </ul>
-            <a href="#">See all Categories</a>
+            <a href="/" onclick="return false">See all Categories</a>
             <div class="bottom-menu">
                 <div>
                     <img src="./images/specail offers.jpg" alt="">
@@ -987,8 +987,8 @@
                                 src="./images/facebook-logo-svgrepo-com (2).png" alt=""></a></li>
                     <li><a href="https://www.pinterest.com/industrybuy0039/" target="_blank"><img
                                 src="./images/pinterest-logo-svgrepo-com (1).png" alt=""></a></li>
-                    <li><a href="#"><img src="./images/youtube-symbol-svgrepo-com.png" alt=""></a></li>
-                    <li><a href="#"><img src="./images/instagram-logo-facebook-2-svgrepo-com (1).png" alt=""></a></li>
+                    <li><a href="#" onclick="return false"><img src="./images/youtube-symbol-svgrepo-com.png" alt=""></a></li>
+                    <li><a href="#" onclick="return false"><img src="./images/instagram-logo-facebook-2-svgrepo-com (1).png" alt=""></a></li>
                 </ul>
             </div>
         </div>
@@ -1020,8 +1020,8 @@
             </div>
         </div>
         <div class="extreme-bottom">
-            <p>Copyright © industrybuying.com 2013-2022 All Right Reserved | &nbsp;<a href="#">Privacy Policy</a>&nbsp;
-                | &nbsp;<a href="#">Terms & Conditions</a></p>
+            <p>Copyright © industrybuying.com 2013-2022 All Right Reserved | &nbsp;<a href="#" onclick="return false">Privacy Policy</a>&nbsp;
+                | &nbsp;<a href="#" onclick="return false">Terms & Conditions</a></p>
             <div>
                 <h3>Your trusted Partner to buy Business Supplies online</h3>
                 <p>At Industrybuying.com, we are committed to offering the best online shopping experience to our

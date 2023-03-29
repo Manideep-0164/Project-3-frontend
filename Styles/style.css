@@ -66,6 +66,10 @@ nav > .nav-body {
   gap: 4px;
 }
 
+.nav-items>ul>li>a{
+  box-shadow:none;
+}
+
 .nav-items>ul>li>a:hover{
   box-shadow: 0 1.5px 0 0 white;
 }
@@ -161,7 +165,7 @@ nav > .nav-body {
   display: flex;
 }
 
-.remove-fixed{
+.fixed-menu{
   position: absolute;   
 }
 
