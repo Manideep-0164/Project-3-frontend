@@ -24,24 +24,10 @@ function myFunction() {
     }
 }
 
-// Removing the Side-Menu bar from the homepage by reaching the footer
 
-let menu = document.getElementsByClassName("menu-bar")
 
-window.addEventListener('scroll', () => {
 
-    const scrollPosition = window.pageYOffset;      // Get the scroll position
-
-    if (scrollPosition >= 3968.285888671875) {      //3987.142822265625
-        menu[0].style.display = 'none'
-    }
-    else {
-        menu[0].style.display = 'block'
-    }
-
-    console.log(scrollPosition);                    // Log the scroll position
-});
-
+// LOGIN Functionalities
 
 document.getElementById("user-name").addEventListener("click", () => {
     if (userName == null) {

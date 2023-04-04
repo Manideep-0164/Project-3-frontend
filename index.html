@@ -89,15 +89,17 @@
 
     <!-- LANDING PART ********************** LANDING PART **************************** LANDING PART  -->
 
+    <div class="menu-overlay"></div>
+
     <div class="landing-body">
         <div class="menu-bar">
-            <ul>
-                <li>
+            <ul onmouseover="addOverlay()" onmouseleave="removeOverlay()">
+                <li class="menu-items">
                     <img src="./images//1626345464161209agriculture-garden-landscaping (1).webp" alt="">Agriculture
                     Garden & Landscaping
                     <div class="mega-menu">
                         <ul class="list-non-bullet-menu">
-                            <li><a href="/products.html" onclick="grainMachine()" id="grain-processing-machine">Grain Processing Machine</a></li>
+                            <li><a id="grain-processing-machine" href="/products.html" onclick="grainMachine()" >Grain Processing Machine</a></li>
                             <li><a href="#" onclick="return false">Tillers and Cultivater</a></li>
                             <li><a href="#" onclick="return false">Brush Cutter and Accessories</a></li>
                             <li><a href="#" onclick="return false">Chuff Cutter</a></li>
@@ -113,7 +115,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="https://static3.industrybuying.com/navigation/161209power-tools.png" alt="">Power
                     Tools
                     <div class="mega-menu">
@@ -134,7 +136,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="./images/officesupplies.webp" alt="">Office Supplies
                     <div class="mega-menu">
                         <ul class="list-non-bullet-menu">
@@ -154,7 +156,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="./images/1626346599161209material-handling.webp" alt="">Material Handling
                     <div class="mega-menu">
                         <ul class="list-non-bullet-menu">
@@ -174,7 +176,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="./images/1626346831161209pumps.webp" alt="">Pumps
                     <div class="mega-menu">
                             <ul class="list-non-bullet-menu">
@@ -194,7 +196,7 @@
                             </ul>
                         </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="https://static3.industrybuying.com/navigation/161209automative-maintenance.png"
                         alt="">Automotive Maintainence
                         <div class="mega-menu">
@@ -215,7 +217,7 @@
                             </ul>
                         </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="./images/1627045810safety.png" alt="">Safety
                     <div class="mega-menu">
                         <ul class="list-non-bullet-menu">
@@ -235,7 +237,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="./images/1626345597161209cleaning.webp" alt="">Cleaning
                     <div class="mega-menu">
                             <ul class="list-non-bullet-menu">
@@ -255,7 +257,7 @@
                             </ul>
                         </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="./images/1626345697161209electrical.webp" alt="">Electrical
                     <div class="mega-menu">
                             <ul class="list-non-bullet-menu">
@@ -275,7 +277,7 @@
                             </ul>
                         </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="./images/1626346182161209hand-tools.webp" alt="">Hand Tools
                     <div class="mega-menu">
                         <ul class="list-non-bullet-menu">
@@ -295,7 +297,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="./images/1627045855testing-measuring.png" alt="">Testing Measuring
                     <div class="mega-menu">
                         <ul class="list-non-bullet-menu">
@@ -315,7 +317,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="./images/1626346305161209it-electronics (1).webp" alt="">Furniture and Hospitality
                     <div class="mega-menu">
                         <ul class="list-non-bullet-menu">
@@ -335,7 +337,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="menu-items">
                     <img src="./images/1626345844161209furniture-hospitality.webp" alt="">IT & Electronics
                     <div class="mega-menu">
                             <ul class="list-non-bullet-menu">
@@ -630,7 +632,7 @@
                             <div class="card card1">
                                 <div class="item">
                                     <div class="card-img">
-                                        <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.36695656_1668315290623.webp"
+                                        <img onclick="grainMachine(); redirect()" src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.36695656_1668315290623.webp"
                                             alt="">
                                     </div>
                                     <p>Grain Processing Machines</p>
@@ -676,7 +678,7 @@
                             <div class="card card1">
                                 <div class="item">
                                     <div class="card-img">
-                                        <img src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/chain-saw/electric-chain-saw/AG.CH.1441144_1667909579322.webp"
+                                        <img onclick="chainSaws(); redirect()"  src="https://static1.industrybuying.com/products/agriculture-garden-landscaping/chain-saw/electric-chain-saw/AG.CH.1441144_1667909579322.webp"
                                             alt="">
                                     </div>
                                     <p>Electric Chain Saw</p>
@@ -1292,6 +1294,7 @@
 
 <script src="./scripts/nav.js"></script>
 
+<script src="/scripts/index.js"></script>
 
 <script src="./scripts/login.js"></script>
 

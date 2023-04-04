@@ -9,6 +9,7 @@
 
 :root {
   --menu-hover-color: #525d62;
+  --overlay-color: rgb(0, 0, 0, 0.5)
 }
 
 .help-text {
@@ -174,9 +175,7 @@ nav>.nav-body {
 
 .landing-body>.menu-bar {
   width: 270px;
-  border-right-style: solid;
-  border-right-width: thin;
-  border-right-color: #f2e0e0;
+  /* box-shadow: 1px 1px 0px 0px #f2e0e0; */
   padding: 11px 0px 0px 4px;
   background-color: white;
   padding-bottom: 10px;
@@ -195,7 +194,7 @@ nav>.nav-body {
 
 .landing-body>.menu-bar>ul>li>.mega-menu {
   position: absolute;
-  left: 265px;
+  left: 266px;
   top: 0px;
   width: 13.5rem;
   height: 33.93rem;
@@ -222,7 +221,6 @@ nav>.nav-body {
 
 .mega-menu>.list-non-bullet-menu>li {
   cursor: pointer;
-  padding: 9px 0px 9px 11px;
 }
 
 .list-non-bullet-menu>li>a {
@@ -233,6 +231,7 @@ nav>.nav-body {
   width: 11rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 9px 0px 9px 11px;
 }
 
 .list-non-bullet-menu>li:hover {
@@ -274,7 +273,23 @@ nav>.nav-body {
   color: white;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  transition: background-color 0.5s;
+  /* transition: background-color 0.5s; */
+}
+
+.menu-overlay {
+  background-color: var(--overlay-color);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 5.35rem;
+  left: 16.8rem;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.show-menuOverlay{
+  visibility: visible;
+  z-index: 1;
 }
 
 .menu-bar>ul>li>img {
