@@ -144,6 +144,7 @@ function loginReq(data) {
         console.log(res);
         localStorage.setItem("name", res.name);
         localStorage.setItem("token", res.token);
+        localStorage.setItem("userId", res.userId);
 
         setTimeout(() => {
           alert(res.msg);

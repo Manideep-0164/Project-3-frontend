@@ -2,7 +2,11 @@
 
 const productURL = "https://teal-seahorse-suit.cyclic.app";
 // const productURL = "http://localhost:2020";
+const token = localStorage.getItem("token");
+const name = localStorage.getItem("name");
 
+const barLoader = document.getElementsByClassName("bar-loader")[0];
+const loaderOverlay = document.getElementsByClassName("loader-overlay")[0];
 let cardCont = document.getElementsByClassName("card-container")[0];
 let headDiv = document.getElementsByClassName("product-top")[0];
 let category = document.getElementsByClassName("sub-heading")[0];
@@ -30,7 +34,7 @@ let data = {
   ],
 };
 
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
   fetchProducts();
 });
 
@@ -156,6 +160,49 @@ function createCards(data) {
     let cartBtn = document.createElement("button");
     cartBtn.setAttribute("class", "addToCart");
     cartBtn.innerText = "ADD TO CART";
+
+    cartBtn.addEventListener("click", async () => {
+      const itemDetails = {
+        name: e.name,
+        brand: e.brand,
+        image: e.image,
+        price: e.price,
+        category: e.category,
+      };
+
+      let isItemAddedToCart;
+
+      loaderOverlay.style.display = "block";
+      barLoader.style.display = "block";
+
+      try {
+        isItemAddedToCart = await fetch(`${productURL}/cart/add-to-cart`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token,
+          },
+          body: JSON.stringify(itemDetails),
+        }).then((res) => res.json());
+      } catch (error) {
+        console.log(error);
+        alert("Something went wrong.");
+      } finally {
+        loaderOverlay.style.display = "none";
+        barLoader.style.display = "none";
+      }
+
+      if (isItemAddedToCart?.error === "Please Login")
+        return alert("Please Login");
+
+      if (isItemAddedToCart?.message === "Product added to cart.")
+        return alert("Product added to cart.");
+
+      if (isItemAddedToCart?.message === "Already added!")
+        return alert("Already added!");
+
+      console.log(isItemAddedToCart);
+    });
 
     childCard.append(imgDiv, infoCont, cartBtn);
 
@@ -296,7 +343,6 @@ for (let i of brandItms) {
 }
 
 // Sorting the products by price or name
-
 sortButton.addEventListener("change", async (e) => {
   let cat = headingData.subCategory;
 
@@ -305,9 +351,22 @@ sortButton.addEventListener("change", async (e) => {
     "Grain Processing Machine": "Grain processing",
   };
 
-  const filteredProducts = await fetch(
-    `${productURL}/product/sort?cat=${catOptions[cat]}&sort=${e.target.value}`
-  ).then((res) => res.json());
+  let filteredProducts;
+
+  loaderOverlay.style.display = "block";
+  barLoader.style.display = "block";
+
+  try {
+    filteredProducts = await fetch(
+      `${productURL}/product/sort?cat=${catOptions[cat]}&sort=${e.target.value}`
+    ).then((res) => res.json());
+  } catch (error) {
+    console.log(error);
+    alert("Something went wrong.");
+  } finally {
+    loaderOverlay.style.display = "none";
+    barLoader.style.display = "none";
+  }
 
   createProducts(filteredProducts);
 });
